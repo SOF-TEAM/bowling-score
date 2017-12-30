@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BowlingScore</string>
+
+    <string name="btn_count">Count</string>
 </resources>
