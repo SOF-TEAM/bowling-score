@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v7.widget.Toolbar
 
-import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v4.view.ViewPager
 import android.support.design.widget.TabLayout
 import android.support.v4.app.FragmentPagerAdapter
@@ -14,9 +13,6 @@ import android.support.v4.app.FragmentPagerAdapter
 
 
 class MainActivity : AppCompatActivity() {
-
-    // : ToolBar
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,20 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-//    private fun setupViewPager(viewPager: ViewPager) {
-//        val adapter = ViewPagerAdapter(supportFragmentManager)
-//        adapter.addFragment(OneFragment(), "ONE")
-//        adapter.addFragment(TwoFragment(), "TWO")
-//        adapter.addFragment(ThreeFragment(), "THREE")
-//        viewPager.adapter = adapter
-//    }
-
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(OneFragment(), "ONE")
-        adapter.addFragment(TwoFragment(), "TWO")
-        adapter.addFragment(TreeFragment(), "THREE")
+        adapter.addFragment(OneFragment(), "bowl now")
+        adapter.addFragment(TwoFragment(), "edit names")
+        adapter.addFragment(TreeFragment(), "team info")
+        adapter.addFragment(FourFragment(), "choose graphics")
+        adapter.addFragment(FiveFragment(), "games")
         viewPager.adapter = adapter
     }
 
